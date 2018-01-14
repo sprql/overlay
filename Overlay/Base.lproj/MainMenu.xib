@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="13771" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="13771"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="NSApplication">
+            <connections>
+                <outlet property="delegate" destination="Voe-Tx-rLC" id="GzC-gU-4Uq"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application"/>
+        <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="Overlay" customModuleProvider="target"/>
+        <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
+        <customObject id="egB-9M-igc" customClass="StatusMenuController" customModule="Overlay" customModuleProvider="target">
+            <connections>
+                <outlet property="statusMenu" destination="uQy-DD-JDr" id="NhT-mC-kRp"/>
+            </connections>
+        </customObject>
+        <menu title="Overlay" systemMenu="apple" id="uQy-DD-JDr">
+            <items>
+                <menuItem title="Add overlay…" id="KRA-23-0Oz">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="addOverlay:" target="egB-9M-igc" id="LpH-6B-PPW"/>
+                    </connections>
+                </menuItem>
+                <menuItem isSeparatorItem="YES" id="r9B-CS-goS"/>
+                <menuItem title="About Overlay" id="5kV-Vb-QxS">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="orderFrontStandardAboutPanel:" target="-1" id="Exp-CZ-Vem"/>
+                    </connections>
+                </menuItem>
+                <menuItem isSeparatorItem="YES" id="VOq-y0-SEH"/>
+                <menuItem title="Preferences…" keyEquivalent="," id="BOF-NM-1cW"/>
+                <menuItem isSeparatorItem="YES" id="4je-JR-u6R"/>
+                <menuItem title="Toggle overlays" id="Kd2-mp-pUS">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="unhideAllApplications:" target="-1" id="Dhg-Le-xox"/>
+                    </connections>
+                </menuItem>
+                <menuItem isSeparatorItem="YES" id="kCx-OE-vgT"/>
+                <menuItem title="Quit Overlay" keyEquivalent="q" id="4sb-4s-VLi">
+                    <connections>
+                        <action selector="terminate:" target="-1" id="Te7-pn-YzF"/>
+                    </connections>
+                </menuItem>
+            </items>
+        </menu>
+    </objects>
+</document>
